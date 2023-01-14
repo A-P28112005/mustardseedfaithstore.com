@@ -84,3 +84,9 @@ img {
     margin:auto;
     color:black;
 }
+
+#Everything {
+    display:flex;
+    flex-wrap:wrap;
+    
+}
