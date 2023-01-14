@@ -2,7 +2,7 @@
     color:blue;
     font-weight: bold;
     font: Arial Round;
-    font-size: 2cm;
+    font-size: 15mm;
     text-align: center;
 }
 
@@ -85,7 +85,7 @@ img {
     color:black;
 }
 
-#Everything {
+.Everything {
     display:flex;
     flex-wrap:wrap;
     
