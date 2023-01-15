@@ -6,16 +6,7 @@
     text-align: center;
 }
 
-div {
-    align-self: center;
-    border: 2px;
-    border-color: black;
-    padding: 10px;
-    margin:5px;
-    width:450px;
-    height:300px;
 
-}
 
 img {
     align-self: center;
@@ -32,9 +23,9 @@ img {
 .Youtube {
     vertical-align:center;
     padding:20px;
-    font-size: 30px;
+    font-size: 25px;
     color:darkblue;
-    margin: 20px;
+    margin: auto;
     
 } 
 
@@ -68,22 +59,13 @@ img {
     margin:auto;
 }
 
-#Upbeat > div{
-    padding: 20px;
-    margin:auto;
-    size: 30px;
-}
+
 
 .border border-danger {
     color:blueviolet;
 }
 
-#Upbeat > div > .Youtube {
-    font-size: 30px;
-    padding: 5mm;
-    margin:auto;
-    color:black;
-}
+
 
 .Everything {
     display:flex;
@@ -97,7 +79,6 @@ img {
     border-style:solid;
     border-color:maroon; 
     height:100%;
-    
-    
     padding:50px;
+    padding-bottom:50px;
 }
