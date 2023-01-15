@@ -2,7 +2,7 @@
     color:blue;
     font-weight: bold;
     font: Arial Round;
-    font-size: 15mm;
+    font-size: 20mm;
     text-align: center;
 }
 
@@ -89,4 +89,15 @@ img {
     display:flex;
     flex-wrap:wrap;
     
+}
+
+#Introduction {
+    background-color:lemonchiffon; 
+    margin:auto;
+    border-style:solid;
+    border-color:maroon; 
+    height:100%;
+    
+    
+    padding:50px;
 }
