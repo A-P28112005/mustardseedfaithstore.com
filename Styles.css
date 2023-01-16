@@ -1,5 +1,5 @@
 .Dublin {
-    color:blue;
+    color:orangered;
     font-weight: bold;
     font: Arial Round;
     font-size: 25mm;
@@ -86,3 +86,7 @@ img {
 #grad {
     background-image: linear-gradient(#f9fd50, #00bd56, #00b7c2);
   }
+
+#Teal {
+    background-image: linear-gradient(#0F7F7F, #EE1FEF)
+}
