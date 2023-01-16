@@ -2,7 +2,7 @@
     color:blue;
     font-weight: bold;
     font: Arial Round;
-    font-size: 20mm;
+    font-size: 25mm;
     text-align: center;
 }
 
@@ -55,7 +55,7 @@ img {
 .Fav {
     color:red;
     font-size:1cm;
-    padding:25px;
+    padding:35px;
     margin:auto;
 }
 
@@ -82,3 +82,7 @@ img {
     padding:50px;
     padding-bottom:50px;
 }
+
+#grad {
+    background-image: linear-gradient(#f9fd50, #00bd56, #00b7c2);
+  }
