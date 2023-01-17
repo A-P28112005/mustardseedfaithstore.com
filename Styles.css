@@ -73,14 +73,15 @@ img {
     
 }
 
-#Introduction {
-    background-color:lemonchiffon; 
+#Introduction { 
     margin:auto;
     border-style:solid;
-    border-color:maroon; 
+    border-color:#8b008b; 
+    border-width:1mm;
     height:100%;
     padding:50px;
     padding-bottom:50px;
+    background-image:0.7;
 }
 
 #grad {
