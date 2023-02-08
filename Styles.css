@@ -96,4 +96,6 @@ img {
 
 #pink {
     background-image: linear-gradient(#4EBA16,#ACFE2B,#FE1295,#E5007d);
+    padding:1cm;
+    margin:auto;
 }
