@@ -99,3 +99,38 @@ img {
     padding:1cm;
     margin:auto;
 }
+
+
+.dropdown {
+    position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position:absolute;
+    z-index: 2;
+    background-color: #00bd56;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+    color: white;
+  }
+
