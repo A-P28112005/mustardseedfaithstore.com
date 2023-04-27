@@ -153,3 +153,35 @@ img {
   padding:20px;
 }
 
+
+.navbar {
+    background-color: #222;
+    overflow: hidden;
+    margin: auto;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .navbar li {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .navbar li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar li a:hover {
+    background-color: #333;
+  }
+
