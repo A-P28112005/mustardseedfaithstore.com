@@ -199,6 +199,12 @@ img {
   opacity: 1;
 }
 
+.navbar {
+  border: solid;
+  size: 20px;
+  margin: auto;
+  padding: auto;
+}
 .text {
   background: url('https://m.media-amazon.com/images/I/A1bktGRAovL.png');
   -webkit-background-clip: text;
