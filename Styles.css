@@ -199,5 +199,12 @@ img {
   opacity: 1;
 }
 
+.text {
+  background: url('https://m.media-amazon.com/images/I/A1bktGRAovL.png');
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: fantasy;
+}
 
 
