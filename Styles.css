@@ -376,3 +376,34 @@ footer {
   bottom: 0;
   z-index: 1000;
 }
+
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/469932270_122106135962665841_5820389157366656155_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=uf1_f-nW8VIQ7kNvgEjn7MV&_nc_zt=23&_nc_ht=scontent-cpt1-1.xx&_nc_gid=ApMRcuMcEC7vpiFVVuLPCnZ&oh=00_AYB92h-mr5chJH0A912sYBtRConfVz6gaDN_TwPDn0cz0w&oe=676CD04A');
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 50px;
+}
+
+.content {
+  height: 400px;
+  background-color: white;
+  text-align: center;
+  padding: 50px 20px;
+}

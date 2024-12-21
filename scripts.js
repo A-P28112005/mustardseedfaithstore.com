@@ -10,3 +10,9 @@ function submitForm(event) {
     alert(`Thank you, ${name}! Your message has been received. We will contact you at ${email} soon.`);
     // You can add further logic to send the form data to your backend server here.
 }
+
+
+
+
+
+
