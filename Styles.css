@@ -1,216 +1,376 @@
-.Dublin {
-    color:orangered;
-    font-weight: bold;
-    font: Arial Round;
-    font-size: 25mm;
-    text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: #f0f2f5;
 }
 
 
-
-img {
-    align-self: center;
-    width:200px
-}
-
-#music {
-    color:#FE1295;
-    font-size: 30px;
-    font-weight:bolder;
-    text-align: center;
-}
-
-.Youtube {
-    vertical-align:center;
-    padding:20px;
-    font-size: 25px;
-    color:darkblue;
-    margin: auto;
-    
-} 
-
-
-#Link {
-    align-items: center;
-    align-tracks: center;
-    align-content: center;
-    text-align: center;
-    font-size: 50px;
-    width:900px;
-    height:350px;
-}
-
-.Musiclinks {
-    margin:auto; 
-    font-weight:bold; 
-    color:lime;
-    padding: 50px;
-    font-size: 30px;
-
-
-}
-
-
-
-.Fav {
-    color:red;
-    font-size:1cm;
-    padding:35px;
-    margin:auto;
-}
-
-
-
-.border border-danger {
-    color:blueviolet;
-}
-
-
-
-
-
-.Everything {
-    display:flex;
-    flex-wrap:wrap;
-    
-}
-
-#Introduction { 
-    margin:auto;
-    border-style:solid;
-    border-color:#8b008b; 
-    border-width:1mm;
-    height:100%;
-    padding:50px;
-    padding-bottom:50px;
-    background-image:0.7;
-}
-
-#grad {
-    background-image: linear-gradient(#f9fd50, #00bd56, #00b7c2);
-  }
-
-#Teal {
-    background-image: linear-gradient(#0F7F7F, #EE1FEF)
-}
-
-#pink {
-    background-image: linear-gradient(#4EBA16,#ACFE2B,#FE1295,#E5007d);
-    padding:1cm;
-    margin:auto;
-}
-
-
-.dropdown {
-    position: relative;
-	display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position:absolute;
-    z-index: 2;
-    background-color: #00bd56;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-
-}
-
-.dropdown-content a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-    color: white;
-  }
-
-
-
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-}
-
-.video-container iframe {
-  position: absolute;
-  top: auto;
-  left: auto;
+header {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
   width: 100%;
-  height: 100%;
-  margin:auto;
-  padding:20px;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: auto; /* Push the nav links to center */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the navigation links */
+  flex: 1; /* Allow flex-grow */
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s; /* Add transition for color and transform */
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+  transform: scale(1.1); /* Make the links grow slightly on hover */
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #00aaff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s; /* Add transition for background and transform */
+}
+
+.btn:hover {
+  background: #0088cc;
+  transform: scale(1.05); /* Make the button grow slightly on hover */
+}
+
+main {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+  margin: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+}
+
+.section p {
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #00aaff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0088cc;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.section#home {
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1000;
 }
 
 
-.navbar ul {
+
+
+
+<!-- Business 
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: #f0f2f5;
+  color: #333;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
-.navbar li a {
-  color: #333;
-  font-size: 18px;
+.nav-links li {
+  position: relative;
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: #fff;
   text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+  transform: scale(1.1);
+}
+
+/* Dropdown */
+.dropdown {
   position: relative;
-}
-
-.navbar li a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #333;
-  transition: width 0.3s ease;
-}
-
-.navbar li a:hover::after {
-  width: 100%;
-}
-
-.navbar li a:before {
-  content: '';
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  background: url('idea.png') no-repeat center center;
-  background-size: contain;
+}
+
+.dropbtn {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  background-color: #00aaff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #00aaff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #00aaff;
+}
+
+main {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.section {
+  padding: 4rem 2rem;
+  background-image: image(C:\Users\Test\Downloads\Mustard seed.png);
+  color: #fff;
+  margin: 2rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  top: 5px;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
 }
 
-.navbar li a:hover:before {
-  opacity: 1;
+.section h2 {
+  margin-bottom: 1rem;
 }
 
-.navbar {
-  border: solid;
-  size: 20px;
-  margin: auto;
-  padding: auto;
-}
-.text {
-  background: url('https://m.media-amazon.com/images/I/A1bktGRAovL.png');
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-family: fantasy;
+.section p {
+  margin-bottom: 1.5rem;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #00aaff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
 
+.btn:hover {
+  background: #0088cc;
+  transform: scale(1.05);
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.section#intro {
+  background-image:image(C:\Users\Test\Downloads\Mustard seed.png);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.product {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 10px;
+  flex: 0 1 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 1000;
+}
