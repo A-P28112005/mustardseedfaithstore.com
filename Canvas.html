@@ -67,5 +67,63 @@
     
   </div>
   <div class="parallax"></div>
+
+  <div class="content">
+    <h2>Our Products</h2>
+      <div class="product-container">
+          <!-- Product 1 -->
+          <div class="product">
+              <img src="2.png" alt="Canvas">
+              <h3>Canvas Wall Art A4</h3>
+              <p>R350.00</p>
+              <button class="btn" onclick="addToCart('Canvas Wall Art 1', 350)">Add to Cart</button>
+          </div>
+          <!-- Product 2 -->
+          <div class="product">
+              <img src="3.png" alt="Canvas">
+              <h3>canvas wall art A3</h3>
+              <p>R450.00</p>
+              <button class="btn" onclick="addToCart('Christian T-Shirt 1', 450)">Add to Cart</button>
+          </div>
+
+          <div class="product">
+              <img src="https://scontent-cpt1-1.xx.fbcdn.net/v/t39.30808-6/469595789_122104470968665841_7234174478631079413_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=vde0fT_WjPMQ7kNvgG6Q3d5&_nc_zt=23&_nc_ht=scontent-cpt1-1.xx&_nc_gid=ARHNWajr3eP0VmVU125dfcV&oh=00_AYBCKRcUs7bcvqNQKeJRKJvk79hh5Oyo14_Rc62cdSv1Yg&oe=676CF75D" alt="Canvas">
+              <h3>Canvas wall art A2</h3>
+              <p>R550.00</p>
+              <button class="btn" onclick="addToCart('Christian T-Shirt 1', 550)">Add to Cart</button>
+          </div>
+          <!-- Add more products as needed -->
+      </div>
+    
+    </div>
+  
+  
+  <div class="parallax"></div>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us for more information or inquiries.</p>
+    <form class="contact-form" onsubmit="submitForm(event)">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</section>
+
+<footer>
+  <p>&copy; 2024 Mustard Seed Faith Store. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
