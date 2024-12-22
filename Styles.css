@@ -115,13 +115,14 @@ main {
 }
 
 .section#home {
-  background: linear-gradient(135deg, #4b6cb7, #182848);
-  color: #fff;
+  
+  
+  color: #fff; 
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: center; 
 }
 
 .contact-form {
@@ -273,7 +274,7 @@ main {
 
 .section {
   padding: 4rem 2rem;
-  background-image: image(C:\Users\Test\Downloads\Mustard seed.png);
+  background-image: image("C:\Users\Test\Downloads\Mustard seed.png");
   color: #fff;
   margin: 2rem 0;
   border-radius: 10px;
@@ -312,7 +313,7 @@ main {
 }
 
 .section#intro {
-  background-image:image(C:\Users\Test\Downloads\Mustard seed.png);
+  background-image:image("C:\Users\Test\Downloads\Mustard seed.png");
   color: #fff;
   height: 100vh;
   display: flex;
@@ -380,6 +381,8 @@ footer {
 
 
 
+
+
 body, html {
   height: 100%;
   margin: 0;
@@ -406,4 +409,23 @@ body, html {
   background-color: white;
   text-align: center;
   padding: 50px 20px;
+}
+
+.content img {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px; 
+  float: left;
+  height: 255px;
+  
+}
+
+.content h2 {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+  color: rgb(64, 62, 99);
+  
 }
