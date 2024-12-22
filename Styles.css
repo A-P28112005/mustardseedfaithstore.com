@@ -9,7 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background: #f0f2f5;
-  
+
 }
 
 
@@ -328,6 +328,9 @@ main {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: auto;
+  
+  height: 450px;
 }
 
 .product {
@@ -338,18 +341,25 @@ main {
   flex: 0 1 30%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  height: fit-content;
 }
 
 .product img {
   width: 100%;
-  height: auto;
+  height: fit-content;
   border-radius: 10px;
+  
 }
 
 .contact-form {
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
   text-align: left;
+  
+  padding: 15px; 
+  
+  height: auto;
+  background: transparent;
 }
 
 .form-group {
@@ -408,7 +418,7 @@ body, html {
 
 .content {
   
-  height: 400px;
+  height: 500px;
   background-color: white;
   text-align: center;
   padding: 50px 20px;
@@ -440,4 +450,10 @@ body, html {
   float: left;
   height: auto;
   
+}
+
+#contact form {
+  background: transparent;
+  padding: 50px 20px;
+  text-align: center;
 }
