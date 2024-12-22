@@ -405,6 +405,7 @@ body, html {
 }
 
 .content {
+  
   height: 400px;
   background-color: white;
   text-align: center;
@@ -427,5 +428,14 @@ body, html {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: xx-large;
   color: rgb(64, 62, 99);
+  
+}
+
+.content video {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px; 
+  float: left;
+  height: auto;
   
 }
