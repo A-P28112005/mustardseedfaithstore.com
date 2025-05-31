@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            'playfair': ['"Playfair Display"', 'serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          keyframes: {
+            'fade-in-down': {
+              '0%': { opacity: '0', transform: 'translateY(-40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            'spin-slow': {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            },
+          },
+          animation: {
+            'fade-in-down': 'fade-in-down 0.7s ease-out',
+            'spin-slow': 'spin-slow 2.5s linear infinite',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500" id="mainBody">
+  <!-- Navbar Container -->
+  <div class="w-full flex justify-center fixed top-0 left-0 z-30">
+    <div class="navbar-container w-full max-w-7xl mx-auto flex items-center justify-between px-6 py-4 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700 animate-fade-in-down transition-all duration-700">
+      <div class="font-bold text-xl text-blue-700 dark:text-blue-300 flex items-center gap-2">
+        <svg class="w-8 h-8 text-blue-500 dark:text-blue-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <span class="font-playfair">Divine Prints</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="px-4 py-2 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 font-semibold hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200">Home</a>
+        <a href="catalogue.html" class="px-4 py-2 rounded bg-pink-400 dark:bg-pink-900 text-pink-900 dark:text-pink-200 font-semibold shadow-sm cursor-default">Catalogue</a>
+        <a href="about.html" class="px-4 py-2 rounded bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 font-semibold hover:bg-green-200 dark:hover:bg-green-800 transition-colors duration-200">About</a>
+        <a href="contact.html" class="px-4 py-2 rounded bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-200 font-semibold hover:bg-orange-200 dark:hover:bg-orange-800 transition-colors duration-200">Contact</a>
+        <button id="themeToggle" aria-label="Toggle Dark Mode" class="relative w-12 h-7 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center transition-colors duration-500 focus:outline-none shadow-md">
+          <span class="absolute left-0.5 top-0.5 w-6 h-6 bg-white dark:bg-gray-900 rounded-full shadow transform transition-transform duration-500" id="toggleCircle"></span>
+          <span class="absolute left-1.5 text-yellow-400 text-lg transition-opacity duration-500" id="sunIcon">☀️</span>
+          <span class="absolute right-1.5 text-gray-600 dark:text-gray-300 text-lg opacity-0 dark:opacity-100 transition-opacity duration-500" id="moonIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="h-20"></div>
+
+  <!-- Hero Section -->
+  <section class="w-full max-w-7xl mx-auto px-4 py-16 text-center">
+    <h1 class="text-5xl md:text-6xl font-playfair font-bold text-gray-800 dark:text-white mb-6">Divine Prints Catalogue</h1>
+    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Discover our collection of high-quality DTF prints, bringing your designs to life with vibrant colors and lasting durability.</p>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="w-full max-w-7xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Christian Apparel -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Christian Apparel" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-playfair font-bold text-gray-800 dark:text-white mb-2">Christian Apparel</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Custom t-shirts, hoodies, and more featuring inspirational Christian designs.</p>
+          <a href="#apparel" class="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">View Collection</a>
+        </div>
+      </div>
+
+      <!-- Church Merchandise -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Church Merchandise" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-playfair font-bold text-gray-800 dark:text-white mb-2">Church Merchandise</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Custom prints for church events, conferences, and ministry materials.</p>
+          <a href="#church" class="inline-block px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">View Collection</a>
+        </div>
+      </div>
+
+      <!-- Home Decor -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Home Decor" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-playfair font-bold text-gray-800 dark:text-white mb-2">Home Decor</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Wall art, canvas prints, and decorative items with Christian themes.</p>
+          <a href="#decor" class="inline-block px-6 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">View Collection</a>
+        </div>
+      </div>
+
+      <!-- Accessories -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Accessories" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-playfair font-bold text-gray-800 dark:text-white mb-2">Accessories</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Bags, hats, and other accessories with custom Christian designs.</p>
+          <a href="#accessories" class="inline-block px-6 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-colors">View Collection</a>
+        </div>
+      </div>
+
+      <!-- Event Materials -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Event Materials" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-playfair font-bold text-gray-800 dark:text-white mb-2">Event Materials</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Banners, signs, and promotional materials for Christian events.</p>
+          <a href="#events" class="inline-block px-6 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition-colors">View Collection</a>
+        </div>
+      </div>
+
+      <!-- Custom Orders -->
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Custom Orders" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-playfair font-bold text-gray-800 dark:text-white mb-2">Custom Orders</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Bespoke printing solutions for your unique Christian ministry needs.</p>
+          <a href="#custom" class="inline-block px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="w-full bg-gray-50 dark:bg-gray-800 py-16 mt-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-playfair font-bold text-center text-gray-800 dark:text-white mb-12">Why Choose Divine Prints?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600 dark:text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Premium Quality</h3>
+          <p class="text-gray-600 dark:text-gray-300">High-resolution prints with vibrant colors and lasting durability.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600 dark:text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Fast Turnaround</h3>
+          <p class="text-gray-600 dark:text-gray-300">Quick processing and delivery for all your printing needs.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600 dark:text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Christian Values</h3>
+          <p class="text-gray-600 dark:text-gray-300">Supporting ministries and spreading God's message through quality prints.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="w-full max-w-7xl mx-auto px-4 py-16 text-center">
+    <div class="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
+      <h2 class="text-3xl font-playfair font-bold mb-4">Ready to Start Your Project?</h2>
+      <p class="text-xl mb-8">Let's create something beautiful together for your ministry.</p>
+      <a href="contact.html" class="inline-block px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Contact Us Today</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full bg-gray-900 text-gray-300 py-12 mt-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-playfair font-bold text-white mb-4">Divine Prints</h3>
+          <p class="text-gray-400">Bringing your Christian designs to life with premium DTF printing services.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="catalogue.html" class="hover:text-white transition-colors">Catalogue</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>Email: info@divineprints.com</li>
+            <li>Phone: (555) 123-4567</li>
+            <li>Address: 123 Faith Street</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Follow Us</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+            <a href="#" class="hover:text-white transition-colors">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p>&copy; 2024 Divine Prints. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle logic
+    const themeToggle = document.getElementById('themeToggle');
+    const mainBody = document.getElementById('mainBody');
+    const toggleCircle = document.getElementById('toggleCircle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+
+    // Check for saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+      mainBody.classList.remove('bg-gradient-to-br', 'from-gray-50', 'via-white', 'to-gray-100');
+      mainBody.classList.add('bg-gray-900');
+      toggleCircle.style.transform = 'translateX(28px) scale(1.1)';
+      sunIcon.style.opacity = '0';
+      moonIcon.style.opacity = '1';
+    }
+
+    themeToggle.addEventListener('click', function() {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        mainBody.classList.remove('bg-gradient-to-br', 'from-gray-50', 'via-white', 'to-gray-100');
+        mainBody.classList.add('bg-gray-900');
+        localStorage.setItem('theme', 'dark');
+        toggleCircle.style.transform = 'translateX(28px) scale(1.1)';
+        sunIcon.style.opacity = '0';
+        moonIcon.style.opacity = '1';
+      } else {
+        mainBody.classList.remove('bg-gray-900');
+        mainBody.classList.add('bg-gradient-to-br', 'from-gray-50', 'via-white', 'to-gray-100');
+        localStorage.setItem('theme', 'light');
+        toggleCircle.style.transform = 'translateX(0px) scale(1.1)';
+        sunIcon.style.opacity = '1';
+        moonIcon.style.opacity = '0';
+      }
+    });
+  </script>
+</body>
+</html> 
