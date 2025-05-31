@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          keyframes: {
+            'fade-in-down': {
+              '0%': { opacity: '0', transform: 'translateY(-40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            'spin-slow': {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg)' },
+            },
+          },
+          animation: {
+            'fade-in-down': 'fade-in-down 0.7s ease-out',
+            'spin-slow': 'spin-slow 2.5s linear infinite',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center bg-gray-100 transition-colors duration-500" id="mainBody">
+  <!-- Big Digital Clock Background -->
+  <div id="bigClockBg" class="fixed inset-0 flex items-center justify-center pointer-events-none select-none z-0">
+    <span id="bigClock" class="text-[16vw] md:text-[10vw] font-bold text-gray-300 dark:text-gray-800 opacity-30" style="font-family: 'Orbitron', monospace; letter-spacing: 0.1em;">--:--:--</span>
+  </div>
+  <!-- Navbar Container -->
+  <div class="w-full flex justify-center fixed top-0 left-0 z-30">
+    <div class="navbar-container w-full max-w-4xl mx-auto flex items-center justify-between px-6 py-3 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700 animate-fade-in-down transition-all duration-700">
+      <div class="font-bold text-lg text-blue-700 dark:text-blue-300 flex items-center gap-2">
+        <svg class="w-6 h-6 text-blue-500 dark:text-blue-300 animate-spin-slow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span id="navbarTime">--:--:--</span>
+      </div>
+      <div class="text-gray-700 dark:text-gray-200 font-semibold" id="navbarDate">-- -- ----</div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="px-4 py-2 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 font-semibold hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200 shadow-sm ml-2">Home</a>
+        <a href="quiz.html" class="px-4 py-2 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 font-semibold hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200 shadow-sm ml-2">Quiz</a>
+        <a href="cape.html" class="px-4 py-2 rounded bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-200 font-semibold hover:bg-green-200 dark:hover:bg-green-800 transition-colors duration-200 shadow-sm ml-2">Cape</a>
+        <a href="games.html" class="px-4 py-2 rounded bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-200 font-semibold hover:bg-pink-200 dark:hover:bg-pink-800 transition-colors duration-200 shadow-sm ml-2">Games</a>
+        <a href="portfolio.html" class="px-4 py-2 rounded bg-orange-400 dark:bg-orange-900 text-orange-900 dark:text-orange-200 font-semibold shadow-sm ml-2 cursor-default">Oranjezicht</a>
+        <button id="themeToggle" aria-label="Toggle Dark Mode" class="relative w-12 h-7 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center transition-colors duration-500 focus:outline-none shadow-md">
+          <span class="absolute left-0.5 top-0.5 w-6 h-6 bg-white dark:bg-gray-900 rounded-full shadow transform transition-transform duration-500" id="toggleCircle"></span>
+          <span class="absolute left-1.5 text-yellow-400 text-lg transition-opacity duration-500" id="sunIcon">☀️</span>
+          <span class="absolute right-1.5 text-gray-600 dark:text-gray-300 text-lg opacity-0 dark:opacity-100 transition-opacity duration-500" id="moonIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="h-20"></div>
+  <main class="z-10 w-full max-w-5xl mx-auto mt-12 flex flex-col items-center justify-center">
+    <section class="w-full mb-16 animate-fade-in-down">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-orange-700 dark:text-orange-200 drop-shadow-lg text-center">Oranjezicht: Cape Town's Historic Suburb</h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-700 dark:text-gray-200 text-center">Nestled on the slopes of Table Mountain, Oranjezicht is a suburb rich in history, natural beauty, and outdoor adventure. Explore its origins, heritage, and the breathtaking hiking trails that make it a haven for locals and visitors alike.</p>
+    </section>
+    <section class="w-full mb-16 animate-fade-in-down">
+      <h2 class="text-3xl font-bold text-orange-700 dark:text-orange-200 mb-4">History of Oranjezicht</h2>
+      <div class="prose dark:prose-invert max-w-none text-lg mb-6">
+        <p>Oranjezicht, meaning "Orange View" in Dutch, traces its roots back to the 18th century. The area was originally part of a large farm established by Nicolaas Laubscher in 1708, named for its panoramic views of the Oranje (Orange) bastion of the Castle of Good Hope and the Dutch royal House of Orange. Over the centuries, the farm was subdivided, and the suburb developed into a leafy residential area known for its Victorian and Edwardian architecture, tree-lined avenues, and vibrant community spirit.</p>
+        <p>The Oranjezicht City Farm, a community-driven urban farm, now occupies part of the original farmland. It serves as a living reminder of the suburb's agricultural heritage and is a popular spot for fresh produce, community events, and educational programs.</p>
+        <p>Throughout its history, Oranjezicht has been home to notable figures, including politicians, artists, and activists. Its proximity to the city center and Table Mountain has made it a sought-after address, blending urban convenience with natural tranquility.</p>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Oranjezicht_City_Farm_2014.jpg" alt="Oranjezicht City Farm" class="w-full max-w-2xl mx-auto rounded-xl shadow-lg mb-8">
+    </section>
+    <section class="w-full mb-16 animate-fade-in-down">
+      <h2 class="text-3xl font-bold text-orange-700 dark:text-orange-200 mb-4">Oranjezicht City Farm</h2>
+      <div class="prose dark:prose-invert max-w-none text-lg mb-6">
+        <p>The <a href="https://ozcf.co.za/" class="text-orange-600 dark:text-orange-300 underline hover:text-orange-800" target="_blank">Oranjezicht City Farm</a> is a celebrated urban farm and market, offering a unique green space in the heart of Cape Town. Visitors can enjoy guided tours, gardening workshops, and a vibrant Saturday market featuring organic produce, artisanal foods, and local crafts. The farm is a hub for sustainability, community engagement, and healthy living.</p>
+        <ul class="list-disc ml-8">
+          <li>Open: Wednesday to Saturday, 8am–2pm</li>
+          <li>Location: Corner of Sidmouth Avenue and Upper Orange Street, Oranjezicht</li>
+          <li>Highlights: Fresh produce, farm-to-table café, family-friendly events, and educational programs</li>
+        </ul>
+      </div>
+      <img src="https://ozcf.co.za/wp-content/uploads/2020/10/OZCF-Market-2020-1.jpg" alt="Oranjezicht Market" class="w-full max-w-2xl mx-auto rounded-xl shadow-lg mb-8">
+    </section>
+    <section class="w-full mb-16 animate-fade-in-down">
+      <h2 class="text-3xl font-bold text-orange-700 dark:text-orange-200 mb-4">Hiking Trails Near Oranjezicht</h2>
+      <div class="prose dark:prose-invert max-w-none text-lg mb-6">
+        <p>Oranjezicht is a gateway to some of Cape Town's most iconic hiking trails, offering routes for all fitness levels and interests. The suburb's location on the lower slopes of Table Mountain provides direct access to lush ravines, waterfalls, and panoramic viewpoints. Here are some of the most popular trails:</p>
+        <ol class="list-decimal ml-8">
+          <li>
+            <strong>Table Mountain via Platteklip Gorge</strong><br>
+            <span class="text-gray-600 dark:text-gray-400">Distance: 3 km (one way) | Elevation gain: 700m | Difficulty: Moderate to Strenuous</span><br>
+            The most direct route to the summit of Table Mountain, starting just above Oranjezicht. The trail zigzags up a deep ravine, offering spectacular views of the city and Atlantic Ocean. Expect a steep climb and be prepared for changing weather conditions.
+          </li>
+          <li>
+            <strong>Devil's Peak via Tafelberg Road</strong><br>
+            <span class="text-gray-600 dark:text-gray-400">Distance: 4.5 km (one way) | Elevation gain: 950m | Difficulty: Strenuous</span><br>
+            This challenging hike begins near Oranjezicht and ascends to the dramatic summit of Devil's Peak. The route passes through indigenous fynbos and offers sweeping vistas of Cape Town, Table Bay, and the Cape Flats.
+          </li>
+          <li>
+            <strong>Deer Park and Contour Path</strong><br>
+            <span class="text-gray-600 dark:text-gray-400">Distance: Variable | Difficulty: Easy to Moderate</span><br>
+            Deer Park, on the edge of Oranjezicht, is a favorite for families and dog walkers. The Contour Path runs along the base of Table Mountain, providing gentle gradients, shaded forest, and access to waterfalls and picnic spots.
+          </li>
+          <li>
+            <strong>Stroompie Trail</strong><br>
+            <span class="text-gray-600 dark:text-gray-400">Distance: 2 km loop | Difficulty: Easy</span><br>
+            A short, scenic loop starting in Oranjezicht, ideal for a quick escape into nature. The trail meanders through indigenous vegetation and offers glimpses of local birdlife and mountain streams.
+          </li>
+          <li>
+            <strong>Upper Orange Street to Signal Hill</strong><br>
+            <span class="text-gray-600 dark:text-gray-400">Distance: 5 km (one way) | Difficulty: Moderate</span><br>
+            This route links Oranjezicht to the famous Signal Hill viewpoint, passing through historic neighborhoods and offering panoramic city and ocean views, especially at sunset.
+          </li>
+        </ol>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Table_Mountain_from_Oranjezicht.jpg" alt="Table Mountain from Oranjezicht" class="w-full max-w-2xl mx-auto rounded-xl shadow-lg mb-8">
+    </section>
+    <section class="w-full mb-16 animate-fade-in-down">
+      <h2 class="text-3xl font-bold text-orange-700 dark:text-orange-200 mb-4">Points of Interest & Local Life</h2>
+      <div class="prose dark:prose-invert max-w-none text-lg mb-6">
+        <ul class="list-disc ml-8">
+          <li><strong>Architectural Heritage:</strong> Explore Victorian and Edwardian homes, historic churches, and leafy streetscapes.</li>
+          <li><strong>Community Spirit:</strong> Oranjezicht is known for its active residents' association, regular street markets, and neighborhood events.</li>
+          <li><strong>Cafés & Eateries:</strong> Enjoy artisanal coffee shops, bakeries, and farm-to-table restaurants.</li>
+          <li><strong>Proximity to Attractions:</strong> Oranjezicht is minutes from the Company's Garden, Kloof Street, and the city center.</li>
+        </ul>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Oranjezicht_Cape_Town_2018.jpg" alt="Oranjezicht Neighborhood" class="w-full max-w-2xl mx-auto rounded-xl shadow-lg mb-8">
+    </section>
+    <section class="w-full mb-16 animate-fade-in-down">
+      <h2 class="text-3xl font-bold text-orange-700 dark:text-orange-200 mb-4">Visitor Tips</h2>
+      <div class="prose dark:prose-invert max-w-none text-lg mb-6">
+        <ul class="list-disc ml-8">
+          <li>Best time to visit: October to April for sunny weather and outdoor activities.</li>
+          <li>Safety: Stay on marked trails, carry water, and be mindful of changing mountain weather.</li>
+          <li>Transport: Oranjezicht is easily accessible by car, taxi, or MyCiTi bus. Limited street parking is available.</li>
+          <li>Respect the environment: Help preserve the natural beauty by following Leave No Trace principles.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="w-full mb-16 animate-fade-in-down">
+      <h2 class="text-3xl font-bold text-orange-700 dark:text-orange-200 mb-4">Further Reading & Resources</h2>
+      <div class="prose dark:prose-invert max-w-none text-lg mb-6">
+        <ul class="list-disc ml-8">
+          <li><a href="https://ozcf.co.za/" class="text-orange-600 dark:text-orange-300 underline hover:text-orange-800" target="_blank">Oranjezicht City Farm Official Site</a></li>
+          <li><a href="https://www.alltrails.com/south-africa/western-cape/oranjezicht" class="text-orange-600 dark:text-orange-300 underline hover:text-orange-800" target="_blank">AllTrails: Oranjezicht Hiking</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Oranjezicht" class="text-orange-600 dark:text-orange-300 underline hover:text-orange-800" target="_blank">Wikipedia: Oranjezicht</a></li>
+          <li><a href="https://www.capetown.gov.za/Family%20and%20home/See-all-city-facilities/Our-service-facilities/Community%20parks/Oranjezicht%20Park" class="text-orange-600 dark:text-orange-300 underline hover:text-orange-800" target="_blank">Oranjezicht Park</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="w-full text-center py-6 bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-300 mt-auto">
+    <div class="mb-2">&copy; 2024 Oranjezicht Portfolio. All rights reserved.</div>
+  </footer>
+  <script>
+    // Navbar time/date/info logic
+    function updateNavbarTime() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString();
+      const dateStr = now.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+      document.getElementById('navbarTime').textContent = timeStr;
+      document.getElementById('navbarDate').textContent = dateStr;
+    }
+    setInterval(updateNavbarTime, 1000);
+    updateNavbarTime();
+    // Big digital clock background logic
+    function updateBigClock() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString();
+      document.getElementById('bigClock').textContent = timeStr;
+    }
+    setInterval(updateBigClock, 1000);
+    updateBigClock();
+    // Theme toggle logic
+    const themeToggle = document.getElementById('themeToggle');
+    const mainBody = document.getElementById('mainBody');
+    const toggleCircle = document.getElementById('toggleCircle');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+      mainBody.classList.remove('bg-gray-100');
+      mainBody.classList.add('bg-gray-900');
+      toggleCircle.style.transform = 'translateX(28px) scale(1.1)';
+      sunIcon.style.opacity = '0';
+      moonIcon.style.opacity = '1';
+    }
+    themeToggle.addEventListener('click', function() {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      if (isDark) {
+        mainBody.classList.remove('bg-gray-100');
+        mainBody.classList.add('bg-gray-900');
+        localStorage.setItem('theme', 'dark');
+        toggleCircle.style.transform = 'translateX(28px) scale(1.1)';
+        sunIcon.style.opacity = '0';
+        moonIcon.style.opacity = '1';
+      } else {
+        mainBody.classList.remove('bg-gray-900');
+        mainBody.classList.add('bg-gray-100');
+        localStorage.setItem('theme', 'light');
+        toggleCircle.style.transform = 'translateX(0px) scale(1.1)';
+        sunIcon.style.opacity = '1';
+        moonIcon.style.opacity = '0';
+      }
+    });
+  </script>
+</body>
+</html> 
