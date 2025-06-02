@@ -2,6 +2,7 @@
 <html>
 <head>
   <base target="_top">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -43,8 +44,8 @@
   </div>
 
   <!-- Mobile Menu Button -->
-  <button id="mobileMenuBtn" class="md:hidden fixed top-4 right-4 z-40 p-2 rounded-lg bg-white dark:bg-gray-800 shadow-lg">
-    <svg class="w-6 h-6 text-gray-700 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <button id="mobileMenuBtn" class="md:hidden fixed top-4 right-4 z-40 p-3 rounded-lg bg-white dark:bg-gray-800 shadow-lg">
+    <svg class="w-7 h-7 text-gray-700 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
     </svg>
   </button>
@@ -105,19 +106,19 @@
   </div>
 
   <!-- Mobile Navigation Menu -->
-  <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden">
-    <div class="absolute top-0 right-0 w-64 h-full bg-white dark:bg-gray-800 shadow-lg transform translate-x-full transition-transform duration-300">
+  <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-40 hidden">
+    <div class="absolute top-0 right-0 w-72 h-full bg-white dark:bg-gray-800 shadow-lg transform translate-x-full transition-transform duration-300">
       <div class="p-4">
         <button id="closeMobileMenu" class="absolute top-4 right-4 p-2">
           <svg class="w-6 h-6 text-gray-700 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
-        <div class="mt-8 flex flex-col gap-4">
-          <a href="index.html" class="px-4 py-3 rounded bg-blue-400 dark:bg-blue-900 text-blue-900 dark:text-blue-200 font-semibold shadow-sm">Home</a>
-          <a href="catalogue.html" class="px-4 py-3 rounded bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-200 font-semibold">My online store</a>
-          <a href="Leap.html" class="px-4 py-3 rounded bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-200 font-semibold">LEAP</a>
-          <a href="contact.html" class="px-4 py-3 rounded bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-200 font-semibold">Contact</a>
+        <div class="mt-12 flex flex-col gap-4">
+          <a href="index.html" class="px-4 py-4 rounded-lg bg-blue-400 dark:bg-blue-900 text-blue-900 dark:text-blue-200 font-semibold shadow-sm text-lg">Home</a>
+          <a href="catalogue.html" class="px-4 py-4 rounded-lg bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-200 font-semibold text-lg">My online store</a>
+          <a href="Leap.html" class="px-4 py-4 rounded-lg bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-200 font-semibold text-lg">LEAP</a>
+          <a href="contact.html" class="px-4 py-4 rounded-lg bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-200 font-semibold text-lg">Contact</a>
           <div class="flex items-center justify-between px-4 py-3">
             <span class="text-gray-700 dark:text-gray-200">Dark Mode</span>
             <button id="mobileThemeToggle" class="relative w-12 h-7 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center transition-colors duration-500 focus:outline-none shadow-md">
@@ -132,35 +133,36 @@
   <div class="h-16 md:h-20"></div><br><br>
 
   <!-- Hero Section -->
-  <section class="w-full max-w-7xl mx-auto px-6 sm:px-8 text-center mb-16 md:mb-24 animate-fade-in-down"><br>
-    <h1 class="text-6xl sm:text-7xl md:text-8xl font-bold mb-6 md:mb-8 text-gray-800 dark:text-gray-100">Welcome to AP's Digital Space</h1><br>
-    <p class="text-2xl sm:text-3xl md:text-4xl mb-8 md:mb-10 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">Explore my very own online store (Mustard Seed Faith Store) and follow my christian gap year journey at LEAP discipleship year.</p>
+  <section class="w-full max-w-7xl mx-auto px-4 sm:px-8 text-center mb-12 md:mb-24 animate-fade-in-down">
+    <h1 class="text-4xl sm:text-6xl md:text-8xl font-bold mb-4 md:mb-8 text-gray-800 dark:text-gray-100">Welcome to AP's Digital Space</h1>
+    <p class="text-xl sm:text-2xl md:text-4xl mb-6 md:mb-10 text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">Explore my very own online store (Mustard Seed Faith Store) and follow my christian gap year journey at LEAP discipleship year.</p>
   </section>
   <section class="w-full max-w-7xl mx-auto px-6 sm:px-8 text-center mb-16 md:mb-24 animate-fade-in-down">
     <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-12 md:p-16 border-4 border-blue-200 dark:border-blue-800">
       <h2 class="text-5xl md:text-6xl font-bold mb-10 md:mb-12 text-blue-700 dark:text-blue-300">Recently featured products at Mustard Seed Faith Store</h2>
       <div class="flex justify-center items-center">
-        <iframe 
-          src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F641674105538418%2F&show_text=false&width=560&t=0&autoplay=1&mute=0" 
-          width="800" 
-          height="450" 
-          style="border:none;" 
-          scrolling="no" 
-          frameborder="0" 
-          allowfullscreen="true" 
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-          allowFullScreen="true">
-        </iframe>
+        <div class="w-full max-w-[800px] aspect-video">
+          <iframe 
+            class="w-full h-full"
+            src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F641674105538418%2F&show_text=false&width=560&t=0&autoplay=1&mute=0" 
+            style="border:none;" 
+            scrolling="no" 
+            frameborder="0" 
+            allowfullscreen="true" 
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+            allowFullScreen="true">
+          </iframe>
+        </div>
       </div>
     </div>
   </section>
   <!-- Main Content Sections -->
-  <main class="z-10 w-full max-w-8xl mx-auto px-8 sm:px-10 flex flex-col items-center justify-center">
+  <main class="z-10 w-full max-w-8xl mx-auto px-4 sm:px-10 flex flex-col items-center justify-center">
     <!-- Business Section -->
-    <section class="w-full mb-20 md:mb-28 animate-fade-in-down">
-      <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-10 md:p-12 border-2 border-green-200 dark:border-green-800">
-        <h2 class="text-6xl md:text-7xl font-bold mb-8 md:mb-10 text-green-700 dark:text-green-300 text-center">Business Catalogue</h2>
-        <p class="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-10 md:mb-12 text-center">Discover our range of products and services designed to meet your needs.</p>
+    <section class="w-full mb-12 md:mb-28 animate-fade-in-down">
+      <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-12 border-2 border-green-200 dark:border-green-800">
+        <h2 class="text-4xl md:text-7xl font-bold mb-6 md:mb-10 text-green-700 dark:text-green-300 text-center">Business Catalogue</h2>
+        <p class="text-xl md:text-3xl text-gray-600 dark:text-gray-400 mb-8 md:mb-12 text-center">Discover our range of products and services designed to meet your needs.</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 mb-10 md:mb-12">
           <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900 dark:to-emerald-900 rounded-2xl p-8 md:p-10">
             <h3 class="text-5xl md:text-6xl font-semibold mb-6 md:mb-8 text-green-700 dark:text-green-300">Featured Products</h3>
