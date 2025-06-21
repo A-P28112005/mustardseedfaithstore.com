@@ -42,7 +42,7 @@
   <div class="w-full flex justify-center fixed top-0 left-0 z-30">
     <div class="navbar-container w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 py-3 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-lg border border-gray-200 dark:border-gray-700 animate-fade-in-down transition-all duration-700">
       <!-- Time and Date Section -->
-      <div class="flex items-center justify-between w-full md:w-auto mb-2 md:mb-0">
+      <div class="flex items-center justify-between w-full md:w-auto mb-2 md:mb-0 gap-6 md:gap-8">
         <div class="font-bold text-base md:text-lg text-blue-700 dark:text-blue-300 flex items-center gap-2">
           <svg class="w-5 h-5 md:w-6 md:h-6 text-blue-500 dark:text-blue-300 animate-spin-slow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
@@ -50,15 +50,13 @@
           </svg>
           <span id="navbarTime" class="text-sm md:text-base">--:--:--</span>
         </div>
-        <div class="text-gray-700 dark:text-gray-200 font-semibold text-sm md:text-base" id="navbarDate">-- -- ----</div>
+        <div class="text-gray-700 dark:text-gray-200 font-semibold text-sm md:text-base px-2" id="navbarDate">-- -- ----</div>
       </div>
       
       <!-- Navigation Links - Hidden on Mobile -->
       <div class="hidden md:flex items-center gap-4">
         <a href="index.html" class="px-4 py-2 rounded bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 font-semibold hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200 shadow-sm">Home</a>
-        <a href="catalogue.html" class="px-4 py-2 rounded bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-200 font-semibold hover:bg-pink-200 dark:hover:bg-pink-800 transition-colors duration-200 shadow-sm">Catalogue</a>
         <a href="contact.html" class="px-4 py-2 rounded bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-200 font-semibold hover:bg-orange-200 dark:hover:bg-orange-800 transition-colors duration-200 shadow-sm">Contact</a>
-        <a href="Leap.html" class="px-4 py-2 rounded bg-purple-400 dark:bg-purple-900 text-purple-900 dark:text-purple-200 font-semibold shadow-sm cursor-default">LEAP</a>
         <button id="themeToggle" aria-label="Toggle Dark Mode" class="relative w-12 h-7 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center transition-colors duration-500 focus:outline-none shadow-md">
           <span class="absolute left-0.5 top-0.5 w-6 h-6 bg-white dark:bg-gray-900 rounded-full shadow transform transition-transform duration-500" id="toggleCircle"></span>
           <span class="absolute left-1.5 text-yellow-400 text-lg transition-opacity duration-500" id="sunIcon">☀️</span>
@@ -72,97 +70,28 @@
     <!-- Hero Section -->
     <section class="w-full text-center mb-8 md:mb-16 animate-fade-in-down px-4">
       <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-purple-700 dark:text-purple-300">LEAP: My Christian Gap Year Journey</h1>
-      <p class="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">A transformative year of spiritual growth, service, and personal development through faith-based experiences and community engagement.</p>
+      <p class="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">A transformative year of spiritual growth, service, and personal development through faith-based experiences and community engagement with brothers and sisters in the local church</p>
     </section>
 
     <!-- Coming Soon Section -->
     <section class="w-full text-center mb-16 md:mb-32 animate-fade-in-down">
       <div class="bg-gradient-to-r from-purple-300 to-pink-300 dark:from-purple-700 dark:to-pink-700 rounded-3xl shadow-2xl p-10 md:p-16 lg:p-20 transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-in-out">
         <h2 class="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-white dark:text-gray-900 mb-6 font-orbitron drop-shadow-lg">COMING SOON!</h2>
-        <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white dark:text-gray-100 font-semibold">Exciting content is on its way. Stay tuned for more updates on my LEAP journey!</p>
+        <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white dark:text-gray-100 font-semibold">Exciting things in the making. Stay tuned for more updates on my LEAP page!</p>
       </div>
     </section>
 
-    <!-- Key Experiences Section -->
-    <section class="w-full mb-16 animate-fade-in-down">
-      <h2 class="text-3xl font-bold text-purple-700 dark:text-purple-300 mb-8 text-center">Key Experiences</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Experience Card 1 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-purple-200 dark:border-purple-800 hover:shadow-xl transition-shadow duration-300">
-          <div class="text-4xl mb-4">🙏</div>
-          <h3 class="text-xl font-semibold mb-3 text-purple-700 dark:text-purple-300">Spiritual Formation</h3>
-          <p class="text-gray-600 dark:text-gray-400">Daily devotionals, prayer groups, and Bible study sessions that deepened my relationship with God.</p>
-        </div>
-        <!-- Experience Card 2 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-purple-200 dark:border-purple-800 hover:shadow-xl transition-shadow duration-300">
-          <div class="text-4xl mb-4">🤝</div>
-          <h3 class="text-xl font-semibold mb-3 text-purple-700 dark:text-purple-300">Community Service</h3>
-          <p class="text-gray-600 dark:text-gray-400">Volunteering in local ministries and participating in outreach programs to serve those in need.</p>
-        </div>
-        <!-- Experience Card 3 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-purple-200 dark:border-purple-800 hover:shadow-xl transition-shadow duration-300">
-          <div class="text-4xl mb-4">🌍</div>
-          <h3 class="text-xl font-semibold mb-3 text-purple-700 dark:text-purple-300">Mission Trips</h3>
-          <p class="text-gray-600 dark:text-gray-400">International mission experiences that broadened my perspective and strengthened my faith.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Growth Areas Section -->
-    <section class="w-full mb-16 animate-fade-in-down">
-      <h2 class="text-3xl font-bold text-purple-700 dark:text-purple-300 mb-8 text-center">Areas of Growth</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Growth Area 1 -->
-        <div class="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900 dark:to-blue-900 rounded-xl p-8">
-          <h3 class="text-2xl font-semibold mb-4 text-purple-700 dark:text-purple-300">Spiritual Development</h3>
-          <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
-            <li>Deepened prayer life and spiritual disciplines</li>
-            <li>Enhanced understanding of Scripture</li>
-            <li>Developed stronger faith foundation</li>
-            <li>Grew in personal relationship with God</li>
-          </ul>
-        </div>
-        <!-- Growth Area 2 -->
-        <div class="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900 dark:to-blue-900 rounded-xl p-8">
-          <h3 class="text-2xl font-semibold mb-4 text-purple-700 dark:text-purple-300">Leadership & Service</h3>
-          <ul class="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
-            <li>Led small group discussions and Bible studies</li>
-            <li>Organized community service projects</li>
-            <li>Developed team leadership skills</li>
-            <li>Enhanced communication abilities</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    
 
-    <!-- Testimonials Section -->
-    <section class="w-full mb-16 animate-fade-in-down">
-      <h2 class="text-3xl font-bold text-purple-700 dark:text-purple-300 mb-8 text-center">Impact & Testimonials</h2>
-      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-purple-200 dark:border-purple-800">
-        <blockquote class="text-lg text-gray-700 dark:text-gray-300 italic mb-4">
-          "This gap year has been transformative in ways I never imagined. The combination of spiritual growth, community service, and personal development has prepared me for the next chapter of my life with a stronger foundation in faith."
-        </blockquote>
-        <p class="text-purple-700 dark:text-purple-300 font-semibold">- Personal Reflection</p>
-      </div>
-    </section>
 
-    <!-- Future Plans Section -->
-    <section class="w-full mb-16 animate-fade-in-down">
-      <h2 class="text-3xl font-bold text-purple-700 dark:text-purple-300 mb-8 text-center">Looking Forward</h2>
-      <div class="bg-gradient-to-r from-purple-100 to-blue-100 dark:from-purple-900 dark:to-blue-900 rounded-xl p-8 text-center">
-        <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
-          As I move forward, I carry with me the lessons learned, relationships built, and spiritual growth experienced during this gap year. These experiences will continue to shape my journey of faith and service.
-        </p>
-        <a href="contact.html" class="inline-block px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-md transition-colors duration-200">
-          Connect With Me
-        </a>
-      </div>
-    </section>
-  </main>
+
 
   <footer class="w-full text-center py-6 bg-gray-200 dark:bg-gray-900 text-gray-700 dark:text-gray-300 mt-auto">
-    <div class="mb-2">&copy; 2024 LEAP Gap Year Portfolio. All rights reserved.</div>
+    <div class="mb-2">&copy; 2025 AP's LEAP journey. All rights reserved.</div>
   </footer>
+
+  
 
   <script>
     // Navbar time/date/info logic
@@ -276,9 +205,7 @@
         </button>
         <div class="mt-16 flex flex-col gap-4">
           <a href="index.html" class="px-6 py-4 rounded-lg bg-blue-400 dark:bg-blue-900 text-blue-900 dark:text-blue-200 font-semibold shadow-sm text-lg">Home</a>
-          <a href="catalogue.html" class="px-6 py-4 rounded-lg bg-pink-100 dark:bg-pink-900 text-pink-700 dark:text-pink-200 font-semibold text-lg">Catalogue</a>
           <a href="contact.html" class="px-6 py-4 rounded-lg bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-200 font-semibold text-lg">Contact</a>
-          <a href="Leap.html" class="px-6 py-4 rounded-lg bg-purple-400 dark:bg-purple-900 text-purple-900 dark:text-purple-200 font-semibold text-lg">LEAP</a>
           <div class="flex items-center justify-between px-6 py-4 mt-4">
             <span class="text-gray-700 dark:text-gray-200 text-lg">Dark Mode</span>
             <button id="mobileThemeToggle" class="relative w-12 h-7 bg-gray-300 dark:bg-gray-700 rounded-full flex items-center transition-colors duration-500 focus:outline-none shadow-md">
@@ -289,5 +216,45 @@
       </div>
     </div>
   </div>
+
+  <footer class="w-full bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 text-gray-700 dark:text-gray-300 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400 mb-4">Contact Us</h3>
+          <p>Cape Town, South Africa</p>
+          <email>aaronpaul28112005@gmail.com</email>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-purple-600 dark:text-purple-400 mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400">Home</a></li>
+            <li><a href="https://www.mustardseedfaithstore.co.za" class="hover:text-blue-600 dark:hover:text-blue-400">Store</a></li>
+            <li><a href="Leap.html" class="hover:text-blue-600 dark:hover:text-blue-400">LEAP Journey</a></li>
+            <li><a href="contact.html" class="hover:text-blue-600 dark:hover:text-blue-400">Contact</a></li>
+          </ul>
+        </div>
+        <div class="text-center">
+          <h3 class="text-xl font-bold text-green-600 dark:text-green-400 mb-4">Follow Us</h3>
+          <div class="flex justify-center space-x-4">
+            <a href="https://www.facebook.com/profile.php?id=61569975245035" class="hover:scale-110 transition-transform">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="w-8 h-8">
+            </a>
+            <a href="https://www.instagram.com/mustardseedfaithstore/?next=%2F" class="hover:scale-110 transition-transform">
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="w-8 h-8">
+            </a>
+            <a href="https://wa.me/c/27820463272" class="hover:scale-110 transition-transform">
+              <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" class="w-8 h-8 hover:opacity-80 transition-opacity">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 text-center border-t border-gray-300 dark:border-gray-700 pt-8">
+        <p class="text-sm">&copy; 2025 Mustard Seed Faith Store. All rights reserved.</p>
+        <p class="text-xs mt-2 text-gray-500 dark:text-gray-400">Made with <span class="text-red-500">❤</span> in Cape Town</p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html> 
