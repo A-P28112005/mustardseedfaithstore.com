@@ -207,24 +207,75 @@
     }
 
     // Add this to your existing script section
+    // MOBILE MENU LOGIC
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMobileMenu = document.getElementById('closeMobileMenu');
-    const mobileMenuContent = mobileMenu.querySelector('div');
+    const mobileMenuContent = mobileMenu ? mobileMenu.querySelector('div.absolute') : null;
+    const mobileThemeToggle = document.getElementById('mobileThemeToggle');
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('hidden');
-      setTimeout(() => {
-        mobileMenuContent.style.transform = 'translateX(0)';
-      }, 10);
-    });
+    // Open mobile menu
+    if (mobileMenuBtn && mobileMenu && mobileMenuContent) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => {
+          mobileMenuContent.style.transform = 'translateX(0)';
+        }, 10);
+      });
+    }
 
-    closeMobileMenu.addEventListener('click', () => {
-      mobileMenuContent.style.transform = 'translateX(100%)';
-      setTimeout(() => {
-        mobileMenu.classList.add('hidden');
-      }, 300);
-    });
+    // Close mobile menu
+    if (closeMobileMenu && mobileMenu && mobileMenuContent) {
+      closeMobileMenu.addEventListener('click', () => {
+        mobileMenuContent.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+        }, 300);
+      });
+    }
+
+    // Close mobile menu when a link is clicked
+    if (mobileMenuContent) {
+      mobileMenuContent.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuContent.style.transform = 'translateX(100%)';
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+          }, 300);
+        });
+      });
+    }
+
+    // Mobile dark mode toggle
+    if (mobileThemeToggle) {
+      // Set initial state
+      if (localStorage.getItem('theme') === 'dark') {
+        mobileThemeToggle.querySelector('span').style.transform = 'translateX(28px) scale(1.1)';
+      } else {
+        mobileThemeToggle.querySelector('span').style.transform = 'translateX(0px) scale(1.1)';
+      }
+      mobileThemeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        if (isDark) {
+          mainBody.classList.remove('bg-gray-100');
+          mainBody.classList.add('bg-gray-900');
+          localStorage.setItem('theme', 'dark');
+          toggleCircle.style.transform = 'translateX(28px) scale(1.1)';
+          sunIcon.style.opacity = '0';
+          moonIcon.style.opacity = '1';
+          mobileThemeToggle.querySelector('span').style.transform = 'translateX(28px) scale(1.1)';
+        } else {
+          mainBody.classList.remove('bg-gray-900');
+          mainBody.classList.add('bg-gray-100');
+          localStorage.setItem('theme', 'light');
+          toggleCircle.style.transform = 'translateX(0px) scale(1.1)';
+          sunIcon.style.opacity = '1';
+          moonIcon.style.opacity = '0';
+          mobileThemeToggle.querySelector('span').style.transform = 'translateX(0px) scale(1.1)';
+        }
+      });
+    }
   </script>
   <!-- Add EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
